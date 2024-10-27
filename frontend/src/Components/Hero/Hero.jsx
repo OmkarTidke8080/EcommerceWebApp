@@ -28,7 +28,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="hero-right flex-1 flex justify-center align-middle ">
+      <div className="hero-right flex-1 flex justify-center items-center ">
         <img src={hero_image} alt="Hero" className="object-cover h-full" />
       </div>
     </div>
