@@ -5,7 +5,7 @@ function Item(props) {
   return (
     <div className="item w-[350px] transform transition duration-600 hover:scale-105">
       <Link to={`/product/${props.id}`}>
-        <img src={props.image} alt="" />
+        <img onClick={window.scrollTo(0,0)} src={props.image} alt="" />
       </Link>
       <p className="m-[6px]">{props.name}</p>
       <div className="item-prices flex gap-[20px] ">
