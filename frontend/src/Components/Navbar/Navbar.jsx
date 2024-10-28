@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import shoppingBag from "../Assets/shoppingBag.png";
 import logo from "../Assets/logo.png";
 import "./Navbar.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ShopContext } from "../../Context/ShopContext";
 
 function Navbar() {
   const [menu, setMenu] = useState("shop");
+  const {getTotalCartItems} = useContext(ShopContext)
   const navigate = useNavigate();
   return (
     <div className="navbar border-2 flex justify-around items-center p-5 shadow-md shadow-slate-200	">
@@ -96,7 +98,7 @@ function Navbar() {
           height={40}
           width={40}
         />
-        <div className="nav-cart-count  ">0</div>
+        <div className="nav-cart-count  ">{getTotalCartItems()}</div>
       </div>
     </div>
   );
